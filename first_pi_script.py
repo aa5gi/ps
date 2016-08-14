@@ -1,1 +1,3 @@
 print "wow"
+
+print "ok"
