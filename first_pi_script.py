@@ -1,3 +1,10 @@
-print "wow"
+import serial
 
-print "ok"
+ser = serial.Serial('/dev/ttyUSB0')
+ser.flushInput()
+ser.flushOutput()
+
+while True:
+    bytesToRead = ser.inWaiting()
+    readBytes   = ser.read(bytesToRead)
+    print readBytes
